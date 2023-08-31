@@ -16,6 +16,7 @@ body .main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-behavior: smooth;
 }
 body .main header {
   padding: 0 10% 0 5%;
@@ -25,8 +26,7 @@ body .main header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  position: fixed;
-  left: 0;
+  position: absolute;
   top: 0;
   z-index: 99;
 }
@@ -52,9 +52,15 @@ body .main header nav .nav-link:hover {
 }
 body .main main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 body .main main .introSection {
   position: relative;
+  width: 100%;
   height: 100vh;
   background-image: url(../images/homemade-food.jpg);
   background-size: cover;
@@ -84,17 +90,186 @@ body .main main .introSection .intro .lil-size_resume {
 body .main main .introSection .link-abtUs {
   position: absolute;
   bottom: 15%;
+  width: 12%;
+  padding: 1%;
+}
+body .main main .imgSwiperSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: rgb(255, 178, 35);
+}
+body .main main .imgSwiperSection .carousel {
+  white-space: nowrap;
+  width: 100%;
+  max-width: 1024px;
+  overflow: hidden;
+  cursor: pointer;
+}
+body .main main .imgSwiperSection .carousel img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 340px;
+  width: 33.4%;
+}
+body .main main #about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9%;
+  height: 100vh;
+}
+body .main main #about-us .cadreImg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+body .main main #about-us .cadreImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .main main #about-us .cadreImg .bkgrnd {
+  height: 100%;
+  border-radius: 15px;
+}
+body .main main #about-us .cadreImg .absolute {
+  width: 30%;
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  background-color: rgb(255, 166, 0);
+  border-radius: 80px;
+  padding: 3%;
+  border: 3px solid #fff;
+  /*transition: 0.3s;
+  &:hover{
+      transform: scale(1.2);
+  }*/
+}
+body .main main #about-us .aboutDescription {
+  position: relative;
+  width: 40%;
+  height: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+}
+body .main main #about-us .aboutDescription .descripTitle {
+  color: rgb(255, 166, 0);
+  font-weight: bold;
+}
+body .main main #about-us .aboutDescription .descriParagraphe .paraTitle {
+  color: rgb(255, 166, 0);
+  font-weight: bold;
+}
+body .main main #about-us .aboutDescription .descriParagraphe .paragraphe {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .main main #about-us .aboutDescription .link-abtUs {
+  width: 27%;
+  position: absolute;
+  bottom: 0;
+  padding: 2%;
+}
+body .main main .our-trendingItems {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(255, 166, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .main main .our-trendingItems .trendingTitle {
+  font-weight: 900;
+  font-size: 2.3em;
+}
+body .main main .our-trendingItems .trending-items {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body .main main .our-trendingItems .trending-items .item {
+  width: 8%;
+  height: 100px;
+  background-color: rgb(255, 197, 91);
+  border-radius: 50px;
+  border: 3px solid #fff;
+  transition: 0.2s;
+}
+body .main main .our-trendingItems .trending-items .item:hover {
+  transform: scale(1.2);
+}
+body .main main .our-recipes {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .main main .our-recipes .recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+body .main main .our-recipes .recipes .recipeBox {
+  width: 25%;
+  height: 70%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main main .our-recipes .recipes .recipeBox img {
+  width: 100%;
+  height: 50%;
+  border-radius: 15px 15px 0 0;
+}
+body .main main .our-recipes .recipes .recipeBox .recipeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+  border-radius: 0 0 15px 15px;
+}
+body .main main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs {
+  height: 40px;
+  width: 150px;
+  padding: 2.5%;
+}
+body .main main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs:hover {
+  padding: 2.5%;
+}
+
+.link-abtUs {
   text-decoration: none;
   background-color: rgb(255, 178, 35);
   color: #fff;
   font-weight: bold;
-  width: 12%;
-  padding: 1%;
   text-align: center;
   font-size: 1.2em;
   transition: 0.3s;
 }
-body .main main .introSection .link-abtUs:hover {
+.link-abtUs:hover {
   transform: scale(1.15);
   background-color: rgb(255, 166, 0);
   border: 1px solid #fff;
