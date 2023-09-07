@@ -199,17 +199,50 @@ body .main main .our-trendingItems .trending-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  /*.item{
+      width: 10%;
+      height: 85%;
+      background-color: rgb(255, 197, 91);
+      border-radius: 70px;
+      border: 3px solid #fff;
+      transition: 0.2s;
+      &:hover{
+          transform: scale(1.2);
+      }
+  }*/
 }
-body .main main .our-trendingItems .trending-items .item {
-  width: 8%;
-  height: 100px;
-  background-color: rgb(255, 197, 91);
-  border-radius: 50px;
-  border: 3px solid #fff;
+body .main main .our-trendingItems .trending-items a {
+  width: 10%;
+  height: 85%;
+  position: relative;
   transition: 0.2s;
 }
-body .main main .our-trendingItems .trending-items .item:hover {
+body .main main .our-trendingItems .trending-items a:hover {
   transform: scale(1.2);
+}
+body .main main .our-trendingItems .trending-items a:hover .absolutediv {
+  display: flex;
+}
+body .main main .our-trendingItems .trending-items a .item {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 197, 91);
+  border-radius: 70px;
+  border: 3px solid #fff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .main main .our-trendingItems .trending-items a .absolutediv {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4784313725);
+  position: absolute;
+  top: 0;
+  border-radius: 70px;
+  color: #222;
 }
 body .main main .our-recipes {
   width: 100%;
