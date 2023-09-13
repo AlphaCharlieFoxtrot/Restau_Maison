@@ -8,17 +8,10 @@
 
 body {
   width: 100%;
+  min-width: 375px;
   /*background-color:darksalmon;*/
 }
-body .main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  scroll-behavior: smooth;
-}
-body .main header {
+body header {
   padding: 0 10% 0 5%;
   width: 100%;
   display: flex;
@@ -26,124 +19,166 @@ body .main header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 99;
+  background-color: #ffffff;
 }
-body .main header .logo-name {
-  font-size: 2.3em;
+body header .logo-name {
+  font-size: 2em;
   font-weight: bold;
   color: rgb(255, 178, 35);
 }
-body .main header nav {
-  display: flex;
+body header nav {
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   width: 50%;
 }
-body .main header nav .nav-link {
+body header nav .nav-link {
   text-decoration: none;
   color: #fff;
   font-size: 1.3em;
   font-weight: bold;
 }
-body .main header nav .nav-link:hover {
+body header nav .nav-link:hover {
   opacity: 0.8;
 }
-body .main main {
+body main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  gap: 30px;
 }
-body .main main .introSection {
+body main .introSection {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-image: url(../images/homemade-food.jpg);
-  background-size: cover;
+  height: 85vh;
+  /*background-image: url(../images/homemade-food.jpg);
+  background-size: cover;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
   color: #fff;
-  padding-left: 10%;
   font-weight: bold;
+  position: relative;
 }
-body .main main .introSection .intro {
+body main .introSection img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+body main .introSection .intro {
+  padding: 5%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-body .main main .introSection .intro .big-size_resume {
-  font-size: 3.2em;
+body main .introSection .intro .big-size_resume {
+  font-size: 1.7em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2%;
 }
-body .main main .introSection .intro .big-size_resume span {
+body main .introSection .intro .big-size_resume span {
   color: rgb(255, 178, 35);
   font-size: 1.3em;
 }
-body .main main .introSection .intro .lil-size_resume {
+body main .introSection .intro .lil-size_resume {
   font-size: 0.9em;
 }
-body .main main .introSection .link-abtUs {
+body main .introSection .link-abtUs {
   position: absolute;
   bottom: 15%;
-  width: 12%;
-  padding: 1%;
+  width: 45%;
+  max-width: 221px;
+  padding: 3%;
+  margin-left: 5%;
 }
-body .main main .imgSwiperSection {
+@media (min-width: 768px) {
+  body main .introSection .intro .big-size_resume {
+    font-size: 2.1em;
+  }
+  body main .introSection .intro .big-size_resume span {
+    font-size: 1.6em;
+  }
+  body main .introSection .link-abtUs {
+    width: 25%;
+    padding: 2%;
+  }
+}
+@media (min-width: 1024px) {
+  body main .intro {
+    width: 70%;
+  }
+}
+body main .imgSwiperSection {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  background-color: rgb(255, 178, 35);
 }
-body .main main .imgSwiperSection .carousel {
+body main .imgSwiperSection .carousel {
   white-space: nowrap;
   width: 100%;
-  max-width: 1024px;
   overflow: hidden;
   cursor: pointer;
 }
-body .main main .imgSwiperSection .carousel img {
+body main .imgSwiperSection .carousel img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 340px;
-  width: 33.4%;
+  height: 50vh;
+  width: 100%;
 }
-body .main main #about-us {
+@media (min-width: 768px) {
+  body main .imgSwiperSection .carousel img {
+    width: 50%;
+    height: 30vh;
+  }
+}
+@media (min-width: 1024px) {
+  body main .imgSwiperSection .carousel img {
+    width: 34%;
+    height: 40vh;
+  }
+}
+body main #about-us {
+  padding: 3%;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 9%;
-  height: 100vh;
+  gap: 5%;
 }
-body .main main #about-us .cadreImg {
+body main #about-us .aboutImg {
+  width: 100%;
+}
+body main #about-us .aboutImg .cadreImg {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  width: 100%;
 }
-body .main main #about-us .cadreImg img {
+body main #about-us .aboutImg .cadreImg .bkgrnd {
   -o-object-fit: cover;
      object-fit: cover;
-}
-body .main main #about-us .cadreImg .bkgrnd {
-  height: 100%;
+  width: 100%;
   border-radius: 15px;
 }
-body .main main #about-us .cadreImg .absolute {
-  width: 30%;
+body main #about-us .aboutImg .cadreImg .absolute {
+  width: 20%;
   position: absolute;
   top: -5%;
-  right: -15%;
+  right: -2%;
   background-color: rgb(255, 166, 0);
   border-radius: 80px;
   padding: 3%;
@@ -153,51 +188,94 @@ body .main main #about-us .cadreImg .absolute {
       transform: scale(1.2);
   }*/
 }
-body .main main #about-us .aboutDescription {
-  position: relative;
-  width: 40%;
-  height: 47%;
+body main #about-us .aboutDescription {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  gap: 20px;
+}
+body main #about-us .aboutDescription .descripTitle {
+  color: rgb(255, 166, 0);
+  font-weight: bold;
+}
+body main #about-us .aboutDescription .descriParagraphe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
   gap: 10px;
 }
-body .main main #about-us .aboutDescription .descripTitle {
+body main #about-us .aboutDescription .descriParagraphe .paraTitle {
   color: rgb(255, 166, 0);
   font-weight: bold;
 }
-body .main main #about-us .aboutDescription .descriParagraphe .paraTitle {
-  color: rgb(255, 166, 0);
-  font-weight: bold;
-}
-body .main main #about-us .aboutDescription .descriParagraphe .paragraphe {
+body main #about-us .aboutDescription .descriParagraphe .paragraphe {
   display: flex;
   flex-wrap: wrap;
 }
-body .main main #about-us .aboutDescription .link-abtUs {
-  width: 27%;
-  position: absolute;
-  bottom: 0;
-  padding: 2%;
+body main #about-us .aboutDescription .link-abtUs {
+  width: 40%;
+  height: 40px;
 }
-body .main main .our-trendingItems {
+@media (min-width: 768px) {
+  body main #about-us .aboutImg {
+    width: 100%;
+  }
+  body main #about-us .aboutImg .cadreImg {
+    height: 100%;
+  }
+  body main #about-us .aboutImg .cadreImg .bkgrnd {
+    height: 100%;
+    width: 90%;
+  }
+  body main #about-us .aboutImg .cadreImg .absolute {
+    width: 19%;
+    right: 0;
+    top: -4%;
+  }
+  body main #about-us .aboutDescription .link-abtUs {
+    margin-top: 1%;
+    height: 40px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  body main #about-us {
+    flex-direction: row;
+  }
+  body main #about-us .aboutImg .cadreImg .absolute {
+    width: 24%;
+    right: -3%;
+    top: -4%;
+  }
+  body main #about-us .aboutDescription .link-abtUs {
+    width: 38%;
+  }
+}
+body main .our-trendingItems {
+  padding: 1%;
   width: 100%;
-  height: 50vh;
   background-color: rgb(255, 166, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
 }
-body .main main .our-trendingItems .trendingTitle {
-  font-weight: 900;
-  font-size: 2.3em;
+body main .our-trendingItems .trendingTitle {
+  width: 95%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 15px;
 }
-body .main main .our-trendingItems .trending-items {
-  width: 80%;
+body main .our-trendingItems .trending-items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
   /*.item{
       width: 10%;
@@ -211,99 +289,139 @@ body .main main .our-trendingItems .trending-items {
       }
   }*/
 }
-body .main main .our-trendingItems .trending-items a {
-  width: 10%;
-  height: 85%;
+body main .our-trendingItems .trending-items a {
+  width: 29%;
   position: relative;
   transition: 0.2s;
+  margin-bottom: 5px;
 }
-body .main main .our-trendingItems .trending-items a:hover {
-  transform: scale(1.2);
+body main .our-trendingItems .trending-items a:hover {
+  transform: scale(1.1);
 }
-body .main main .our-trendingItems .trending-items a:hover .absolutediv {
+body main .our-trendingItems .trending-items a:hover .absolutediv {
   display: flex;
 }
-body .main main .our-trendingItems .trending-items a .item {
+body main .our-trendingItems .trending-items a .item {
   width: 100%;
-  height: 100%;
+  height: 100px;
   background-color: rgb(255, 197, 91);
   border-radius: 70px;
   border: 3px solid #fff;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-body .main main .our-trendingItems .trending-items a .absolutediv {
-  width: 100%;
-  height: 100%;
+body main .our-trendingItems .trending-items a .absolutediv {
+  width: 98%;
+  height: 98%;
   display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.4784313725);
   position: absolute;
   top: 0;
-  border-radius: 70px;
+  border-radius: 80px;
   color: #222;
 }
-body .main main .our-recipes {
+@media (min-width: 450px) {
+  body main .trending-items {
+    flex-wrap: nowrap;
+  }
+  body main .trending-items a .item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  body main .trending-items {
+    flex-wrap: nowrap;
+    min-width: 90%;
+  }
+  body main .trending-items a {
+    max-width: 11%;
+  }
+  body main .trending-items a .item {
+    width: 100%;
+  }
+}
+body main .our-recipes {
+  padding: 1%;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-body .main main .our-recipes .recipes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  height: 100%;
+body main .our-recipes .recipesTitle {
+  width: 95%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 25px;
 }
-body .main main .our-recipes .recipes .recipeBox {
-  width: 25%;
-  height: 70%;
+body main .our-recipes .recipes {
+  width: 100%;
+}
+body main .our-recipes .recipes .recipeBox {
+  margin: auto;
+  width: 80%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
 }
-body .main main .our-recipes .recipes .recipeBox img {
+body main .our-recipes .recipes .recipeBox img {
   width: 100%;
-  height: 50%;
+  height: 100%;
   border-radius: 15px 15px 0 0;
 }
-body .main main .our-recipes .recipes .recipeBox .recipeContent {
+body main .our-recipes .recipes .recipeBox .recipeContent {
+  width: 100%;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  gap: 5px;
-  padding: 15px;
+  align-items: left;
+  gap: 15px;
   border-left: 2px solid lightgrey;
   border-right: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
   border-radius: 0 0 15px 15px;
 }
-body .main main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs {
-  height: 40px;
-  width: 150px;
-  padding: 2.5%;
+body main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs {
+  height: 45px;
+  width: 55%;
 }
-body .main main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs:hover {
-  padding: 2.5%;
+@media (min-width: 768px) {
+  body main .our-recipes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  body main .our-recipes .recipesTitle {
+    margin-bottom: 0;
+  }
+  body main .our-recipes .recipes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  body main .our-recipes .recipes .recipeBox {
+    height: 450px;
+    width: 28%;
+  }
+  body main .our-recipes .recipes .recipeBox .recipeContent .link-abtUs {
+    font-size: 1em;
+  }
 }
 
 .link-abtUs {
   text-decoration: none;
+  text-align: center;
   background-color: rgb(255, 178, 35);
   color: #fff;
   font-weight: bold;
-  text-align: center;
   font-size: 1.2em;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .link-abtUs:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   background-color: rgb(255, 166, 0);
   border: 1px solid #fff;
 }/*# sourceMappingURL=styles.css.map */

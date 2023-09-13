@@ -7,119 +7,116 @@
     <!--link googleFont-->
     <title>Document</title>
 
-    <script src="scripts.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    <div class="main">
-        <header>
-            <div class="logo-name">Restau_Maison</div>
-            <nav class="nav-links">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About us</a>
-                <a href="#" class="nav-link">Menu</a>
-                <!--<a href="#" class="nav-link">Réservation</a>-->
-                <a href="#" class="nav-link">Contact us</a>
-            </nav>
-        </header>
-        <main>
-            <article class="introSection"><!--With a backgrnd picture of some food width 100%-->
-                <div class="intro">
-                <!--3em--><div class="big-size_resume">Consequat voluptate adipisicing <br/><span>Restau_Maison</span> ut dolore.</div>
-                <!--0.8em--><p class="lil-size_resume">Exercitation do ea veniam sunt aliquip officia ipsum duis esse excepteur consectetur.</p>
+    <header>
+        <div class="logo-name">Restau_Maison</div>
+        <nav class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About us</a>
+            <a href="#" class="nav-link">Menu</a>
+            <!--<a href="#" class="nav-link">Réservation</a>-->
+            <a href="#" class="nav-link">Contact us</a>
+        </nav>
+    </header>
+    <main>
+        <article class="introSection"><!--With a backgrnd picture of some food width 100%-->
+            <img src="./images/homemade-food.jpg" alt="" class="bckgrdIntro">
+            <div class="intro">
+            <!--3em--><div class="big-size_resume">Consequat voluptate adipisicing <br/><span>Restau_Maison</span> ut dolore.</div>
+            <!--0.8em--><p class="lil-size_resume">Exercitation do ea veniam sunt aliquip officia ipsum duis esse excepteur consectetur.</p>
+            </div>
+            <!--link btn alike--><a href="#about-us" class="link-abtUs">More about us</a>
+        </article>
+        <article class="imgSwiperSection caroussel">
+            <div class="carousel">
+                <img src="images/imgswiper2.jpg" alt="img2">
+                <img src="images/imgswiper3.jpg" alt="img3">
+                <img src="images/imgswiper4.jpg" alt="img4">
+                <img src="images/imgswiper2.jpg" alt="img2">
+                <img src="images/imgswiper3.jpg" alt="img3">
+                <img src="images/imgswiper4.jpg" alt="img4">
+                <img src="images/imgswiper2.jpg" alt="img2">
+                <img src="images/imgswiper3.jpg" alt="img3">
+                <img src="images/imgswiper4.jpg" alt="img4">
+            </div>
+            <!--<div class="checkboxPart">
+                <input name="input_swipeImg" id="input_swipeImg1" type="radio" checked>
+                <input name="input_swipeImg" id="input_swipeImg2" type="radio">
+                <input name="input_swipeImg" id="input_swipeImg3" type="radio">
+                <input name="input_swipeImg" id="input_swipeImg4" type="radio">
+                <input name="input_swipeImg" id="input_swipeImg5" type="radio">
+                <input name="input_swipeImg" id="input_swipeImg6" type="radio">
+            </div>-->
+        </article>
+        <article class="aboutUs" id="about-us">
+            <section class="aboutImg">
+                <div class="cadreImg">
+                    <img src="images/img-bkgrnd_abtus.jpg" alt="background-img" class="bkgrnd">
+                    <img src="images/chef_img.png" alt="portraitChef" class="absolute">
                 </div>
-                <!--link btn alike--><a href="#about-us" class="link-abtUs">More about us</a>
-            </article>
-            <article class="imgSwiperSection caroussel">
-                <div class="carousel">
-                    <img src="images/imgswiper2.jpg" alt="img2">
-                    <img src="images/imgswiper3.jpg" alt="img3">
-                    <img src="images/imgswiper4.jpg" alt="img4">
-                    <img src="images/imgswiper2.jpg" alt="img2">
-                    <img src="images/imgswiper3.jpg" alt="img3">
-                    <img src="images/imgswiper4.jpg" alt="img4">
-                    <img src="images/imgswiper2.jpg" alt="img2">
-                    <img src="images/imgswiper3.jpg" alt="img3">
-                    <img src="images/imgswiper4.jpg" alt="img4">
+            </section>
+            <section class="aboutDescription">
+                <h3 class="descripTitle">About us</h3>
+                <div class="descriParagraphe">
+                    <h2 class="paraTitle">Lorem esse laboris dolor dolor.</h2>
+                    <p class="paragraphe">
+                        Dolor sunt est tempor ad proident ad irure. Commodo anim amet est irure velit non cupidatat consectetur 
+                        minim occaecat id do veniam. Lorem laboris Lorem in est dolor ex dolore velit exercitation tempor magna sint ut. 
+                        Nostrud laborum culpa ad veniam elit commodo culpa dolore amet eu fugiat laboris pariatur. Est magna in est 
+                        anim culpa veniam magna nulla nisi.
+                    </p>
                 </div>
-                <!--<div class="checkboxPart">
-                    <input name="input_swipeImg" id="input_swipeImg1" type="radio" checked>
-                    <input name="input_swipeImg" id="input_swipeImg2" type="radio">
-                    <input name="input_swipeImg" id="input_swipeImg3" type="radio">
-                    <input name="input_swipeImg" id="input_swipeImg4" type="radio">
-                    <input name="input_swipeImg" id="input_swipeImg5" type="radio">
-                    <input name="input_swipeImg" id="input_swipeImg6" type="radio">
-                </div>-->
-            </article>
-            <article class="aboutUs" id="about-us">
-                <section class="aboutImg">
-                    <div class="cadreImg">
-                        <img src="images/img-bkgrnd_abtus.jpg" alt="background-img" class="bkgrnd">
-                        <img src="images/chef_img.png" alt="portraitChef" class="absolute">
+                <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
+            </section>
+        </article>
+        <article class="our-trendingItems">
+            <h2 class="trendingTitle">Our trending items</h2>
+            <div class="trending-items">
+                <a href="#"><img src="./images/item2.jpg" alt="item1" class="item"><div class="absolutediv"><p>see more</p></div></a>
+                <a href="#"><img src="./images/item3.jpg" alt="item2" class="item"><div class="absolutediv"><p>see more</p></div></a>
+                <a href="#"><img src="./images/item4.jpg" alt="item3" class="item"><div class="absolutediv"><p>see more</p></div></a>
+                <a href="#"><img src="./images/item1.jpeg" alt="item4" class="item"><div class="absolutediv"><p>see more</p></div></a>
+                <a href="#"><img src="./images/imgswiper6.jpg" alt="item5" class="item"><div class="absolutediv"><p>see more</p></div></a>
+                <a href="#"><img src="./images/item2.jpg" alt="item1" class="item"><div class="absolutediv"><p>see more</p></div></a>
+            </div>
+        </article>
+        <article class="our-recipes">
+            <h2 class="recipesTitle">Recipes</h2>
+            <div class="recipes">
+                <article class="recipeBox">
+                    <img src="images/recipe1.jpg" alt="imgRecipe" class="recipePic">
+                    <div class="recipeContent">
+                        <h3 class="contentTitle">First recipe</h3>
+                        <div class="contentTxt">
+                            Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor. 
+                        </div>
+                        <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
                     </div>
-                </section>
-                <section class="aboutDescription">
-                    <h3 class="descripTitle">About us</h3>
-                    <div class="descriParagraphe">
-                        <h2 class="paraTitle">Lorem esse laboris dolor dolor.</h2>
-                        <p class="paragraphe">
-                            Dolor sunt est tempor ad proident ad irure. Commodo anim amet est irure velit non cupidatat consectetur 
-                            minim occaecat id do veniam. Lorem laboris Lorem in est dolor ex dolore velit exercitation tempor magna sint ut. 
-                            Nostrud laborum culpa ad veniam elit commodo culpa dolore amet eu fugiat laboris pariatur. Est magna in est 
-                            anim culpa veniam magna nulla nisi.
-                        </p>
+                </article>
+                <article class="recipeBox">
+                    <img src="images/recipe2.jpg" alt="imgRecipe" class="recipePic">
+                    <div class="recipeContent">
+                        <h3 class="contentTitle">Second recipe</h3>
+                        <div class="contentTxt">
+                            Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor.
+                        </div>
+                        <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
                     </div>
-                    <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
-                </section>
-            </article>
-            <article class="our-trendingItems">
-                <h2 class="trendingTitle">Our trending items</h2>
-                <div class="trending-items">
-                    <a href="#"><img src="./images/item2.jpg" alt="item1" class="item"><div class="absolutediv"><p>see more</p></div></a>
-                    <a href="#"><img src="./images/item3.jpg" alt="item2" class="item"><div class="absolutediv"><p>see more</p></div></a>
-                    <a href="#"><img src="./images/item4.jpg" alt="item3" class="item"><div class="absolutediv"><p>see more</p></div></a>
-                    <a href="#"><img src="./images/item1.jpeg" alt="item4" class="item"><div class="absolutediv"><p>see more</p></div></a>
-                    <a href="#"><img src="./images/imgswiper6.jpg" alt="item5" class="item"><div class="absolutediv"><p>see more</p></div></a>
-                </div>
-            </article>
-            <article class="our-recipes">
-                <h2 class="recipesTitle"></h2>
-                <div class="recipes">
-                    <article class="recipeBox">
-                        <img src="images/recipe1.jpg" alt="imgRecipe" class="recipePic">
-                        <div class="recipeContent">
-                            <h3 class="contentTitle">First recipe</h3>
-                            <div class="contentTxt">
-                                Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor. 
-                                Aliquip incididunt nulla magna et nulla ea. Deserunt excepteur esse ullamco consectetur minim do.
-                            </div>
-                            <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
+                </article>
+                <article class="recipeBox">
+                    <img src="images/recipe3.jpeg" alt="imgRecipe" class="recipePic">
+                    <div class="recipeContent">
+                        <h3 class="contentTitle">Third recipe</h3>
+                        <div class="contentTxt">
+                            Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor.
                         </div>
-                    </article>
-                    <article class="recipeBox">
-                        <img src="images/recipe2.jpg" alt="imgRecipe" class="recipePic">
-                        <div class="recipeContent">
-                            <h3 class="contentTitle">Second recipe</h3>
-                            <div class="contentTxt">
-                                Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor. 
-                                Aliquip incididunt nulla magna et nulla ea. Deserunt excepteur esse ullamco consectetur minim do.
-                            </div>
-                            <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
-                        </div>
-                    </article>
-                    <article class="recipeBox">
-                        <img src="images/recipe3.jpeg" alt="imgRecipe" class="recipePic">
-                        <div class="recipeContent">
-                            <h3 class="contentTitle">Third recipe</h3>
-                            <div class="contentTxt">
-                                Adipisicing excepteur deserunt aliqua sint tempor cillum in cillum id est quis nisi duis tempor. 
-                                Aliquip incididunt nulla magna et nulla ea. Deserunt excepteur esse ullamco consectetur minim do.
-                            </div>
-                            <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
-                        </div>
-                    </article>
-                </div>
-            </article>
-        </main>
-    </div>
+                        <!--link btn alike--><a href="#" class="link-abtUs">See our menu</a>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
